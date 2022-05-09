@@ -1,0 +1,160 @@
+{
+  "version": "16.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "QuiddlerBackendStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "QuiddlerBackendStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "QuiddlerBackendStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "QuiddlerBackendStack.template.json",
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/b8762b244ac4fffe4998f9940b5608fb674526af0f9ef56a360dee0fc5176957.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "QuiddlerBackendStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "QuiddlerBackendStack.assets"
+      ],
+      "metadata": {
+        "/QuiddlerBackendStack/QuiddlerBackendService/quiddler-validator-0bc/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "QuiddlerBackendServicequiddlervalidator0bc7B880B48"
+          }
+        ],
+        "/QuiddlerBackendStack/QuiddlerBackendService/ValidateWordLambda/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "QuiddlerBackendServiceValidateWordLambdaServiceRoleD9FE5740"
+          }
+        ],
+        "/QuiddlerBackendStack/QuiddlerBackendService/ValidateWordLambda/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "QuiddlerBackendServiceValidateWordLambdaServiceRoleDefaultPolicy82086D94"
+          }
+        ],
+        "/QuiddlerBackendStack/QuiddlerBackendService/ValidateWordLambda/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "QuiddlerBackendServiceValidateWordLambda8E695FA7"
+          }
+        ],
+        "/QuiddlerBackendStack/QuiddlerBackendService/quiddler-api/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "QuiddlerBackendServicequiddlerapiDFF1958C"
+          }
+        ],
+        "/QuiddlerBackendStack/QuiddlerBackendService/quiddler-api/CloudWatchRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "QuiddlerBackendServicequiddlerapiCloudWatchRole16898CFF"
+          }
+        ],
+        "/QuiddlerBackendStack/QuiddlerBackendService/quiddler-api/Account": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "QuiddlerBackendServicequiddlerapiAccount70021E81"
+          }
+        ],
+        "/QuiddlerBackendStack/QuiddlerBackendService/quiddler-api/Deployment/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "QuiddlerBackendServicequiddlerapiDeployment0B1B279697d54e22c14b7ae9a4d104a1ffe40a6e"
+          }
+        ],
+        "/QuiddlerBackendStack/QuiddlerBackendService/quiddler-api/DeploymentStage.prod/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "QuiddlerBackendServicequiddlerapiDeploymentStageprod0FAB37E5"
+          }
+        ],
+        "/QuiddlerBackendStack/QuiddlerBackendService/quiddler-api/Endpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "QuiddlerBackendServicequiddlerapiEndpoint20A241EA"
+          }
+        ],
+        "/QuiddlerBackendStack/QuiddlerBackendService/quiddler-api/Default/validate/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "QuiddlerBackendServicequiddlerapivalidateDD1E3A69"
+          }
+        ],
+        "/QuiddlerBackendStack/QuiddlerBackendService/quiddler-api/Default/validate/{word}/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "QuiddlerBackendServicequiddlerapivalidatewordDD7FD520"
+          }
+        ],
+        "/QuiddlerBackendStack/QuiddlerBackendService/quiddler-api/Default/validate/{word}/GET/ApiPermission.QuiddlerBackendStackQuiddlerBackendServicequiddlerapi6978883D.GET..validate.{word}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "QuiddlerBackendServicequiddlerapivalidatewordGETApiPermissionQuiddlerBackendStackQuiddlerBackendServicequiddlerapi6978883DGETvalidatewordAF19EE71"
+          }
+        ],
+        "/QuiddlerBackendStack/QuiddlerBackendService/quiddler-api/Default/validate/{word}/GET/ApiPermission.Test.QuiddlerBackendStackQuiddlerBackendServicequiddlerapi6978883D.GET..validate.{word}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "QuiddlerBackendServicequiddlerapivalidatewordGETApiPermissionTestQuiddlerBackendStackQuiddlerBackendServicequiddlerapi6978883DGETvalidatewordCD94C667"
+          }
+        ],
+        "/QuiddlerBackendStack/QuiddlerBackendService/quiddler-api/Default/validate/{word}/GET/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "QuiddlerBackendServicequiddlerapivalidatewordGET8E1718D5"
+          }
+        ],
+        "/QuiddlerBackendStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/QuiddlerBackendStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/QuiddlerBackendStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/QuiddlerBackendStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "QuiddlerBackendStack"
+    }
+  }
+}

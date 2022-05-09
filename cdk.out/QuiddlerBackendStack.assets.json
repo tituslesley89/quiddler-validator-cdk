@@ -1,0 +1,32 @@
+{
+  "version": "16.0.0",
+  "files": {
+    "345ae2eeba6c5ac003459f93f06ac4edbd2f60114d8443918ca95d77810d6355": {
+      "source": {
+        "path": "asset.345ae2eeba6c5ac003459f93f06ac4edbd2f60114d8443918ca95d77810d6355",
+        "packaging": "zip"
+      },
+      "destinations": {
+        "current_account-current_region": {
+          "bucketName": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}",
+          "objectKey": "345ae2eeba6c5ac003459f93f06ac4edbd2f60114d8443918ca95d77810d6355.zip",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-file-publishing-role-${AWS::AccountId}-${AWS::Region}"
+        }
+      }
+    },
+    "b8762b244ac4fffe4998f9940b5608fb674526af0f9ef56a360dee0fc5176957": {
+      "source": {
+        "path": "QuiddlerBackendStack.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "current_account-current_region": {
+          "bucketName": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}",
+          "objectKey": "b8762b244ac4fffe4998f9940b5608fb674526af0f9ef56a360dee0fc5176957.json",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-file-publishing-role-${AWS::AccountId}-${AWS::Region}"
+        }
+      }
+    }
+  },
+  "dockerImages": {}
+}
