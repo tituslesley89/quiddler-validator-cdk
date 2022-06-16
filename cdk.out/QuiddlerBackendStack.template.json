@@ -2,6 +2,9 @@
   "Resources": {
     "QuiddlerBackendServicequiddlervalidator0bc7B880B48": {
       "Type": "AWS::S3::Bucket",
+      "Properties": {
+        "BucketName": "quiddler-validator-0bc"
+      },
       "UpdateReplacePolicy": "Retain",
       "DeletionPolicy": "Retain",
       "Metadata": {
@@ -105,7 +108,7 @@
           "S3Bucket": {
             "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
           },
-          "S3Key": "345ae2eeba6c5ac003459f93f06ac4edbd2f60114d8443918ca95d77810d6355.zip"
+          "S3Key": "fb91b6a987d73b3f2c1c672eeb0fde57942721a29077d849f89ce87420de892f.zip"
         },
         "Role": {
           "Fn::GetAtt": [
@@ -127,7 +130,7 @@
       ],
       "Metadata": {
         "aws:cdk:path": "QuiddlerBackendStack/QuiddlerBackendService/ValidateWordLambda/Resource",
-        "aws:asset:path": "asset.345ae2eeba6c5ac003459f93f06ac4edbd2f60114d8443918ca95d77810d6355",
+        "aws:asset:path": "asset.fb91b6a987d73b3f2c1c672eeb0fde57942721a29077d849f89ce87420de892f",
         "aws:asset:is-bundled": false,
         "aws:asset:property": "Code"
       }

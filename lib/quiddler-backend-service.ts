@@ -9,9 +9,13 @@ export class QuiddlerBackendServices extends Construct {
     constructor(scope: Construct, id: string, props: QuiddlerAppConstants) {
         super(scope, id)
 
-        const bucket = new s3.Bucket(this, props.s3BucketName)
+        const bucket = new s3.Bucket(this, props.s3BucketName, {
+            bucketName : props.s3BucketName
+        })
 
         const validate_word_lambda = this.createLambdaFunction('ValidateWordLambda', 'validate_word', props)
+        const toggle_word_lambda = this.createLambdaFunction('ToggleWordLambda', 'toggle_word_exception', props)
+        const toggle_subject_lambda = this.createLambdaFunction('ToggleSubjectLambda', 'toggle_subject_exception', props)
 
         bucket.grantReadWrite(validate_word_lambda);
 
@@ -23,6 +27,11 @@ export class QuiddlerBackendServices extends Construct {
         const validate = api.root.addResource("validate")
         const validateWithWord = validate.addResource("{word}")
         validateWithWord.addMethod("GET", new aws_apigateway.LambdaIntegration(validate_word_lambda))
+
+        const exception = api.root.addResource("exception")
+        const exceptionWord = exception.addResource("word")
+        const exceptionSubject = exception.addResource("subject")
+        const toggleWordException = exceptionWord.addResource("{word}")
     }
 
 
@@ -36,4 +45,5 @@ export class QuiddlerBackendServices extends Construct {
             }
         })
     }
+
 }

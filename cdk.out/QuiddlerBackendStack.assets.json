@@ -1,20 +1,20 @@
 {
   "version": "16.0.0",
   "files": {
-    "345ae2eeba6c5ac003459f93f06ac4edbd2f60114d8443918ca95d77810d6355": {
+    "fb91b6a987d73b3f2c1c672eeb0fde57942721a29077d849f89ce87420de892f": {
       "source": {
-        "path": "asset.345ae2eeba6c5ac003459f93f06ac4edbd2f60114d8443918ca95d77810d6355",
+        "path": "asset.fb91b6a987d73b3f2c1c672eeb0fde57942721a29077d849f89ce87420de892f",
         "packaging": "zip"
       },
       "destinations": {
         "current_account-current_region": {
           "bucketName": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}",
-          "objectKey": "345ae2eeba6c5ac003459f93f06ac4edbd2f60114d8443918ca95d77810d6355.zip",
+          "objectKey": "fb91b6a987d73b3f2c1c672eeb0fde57942721a29077d849f89ce87420de892f.zip",
           "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-file-publishing-role-${AWS::AccountId}-${AWS::Region}"
         }
       }
     },
-    "b8762b244ac4fffe4998f9940b5608fb674526af0f9ef56a360dee0fc5176957": {
+    "ddffa0bdcd9d4cd4d1badd1770058f90c82b9d0dcf94ac41449f4669e9a87921": {
       "source": {
         "path": "QuiddlerBackendStack.template.json",
         "packaging": "file"
@@ -22,7 +22,7 @@
       "destinations": {
         "current_account-current_region": {
           "bucketName": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}",
-          "objectKey": "b8762b244ac4fffe4998f9940b5608fb674526af0f9ef56a360dee0fc5176957.json",
+          "objectKey": "ddffa0bdcd9d4cd4d1badd1770058f90c82b9d0dcf94ac41449f4669e9a87921.json",
           "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-file-publishing-role-${AWS::AccountId}-${AWS::Region}"
         }
       }

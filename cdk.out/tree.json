@@ -29,7 +29,9 @@
                     "path": "QuiddlerBackendStack/QuiddlerBackendService/quiddler-validator-0bc/Resource",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::S3::Bucket",
-                      "aws:cdk:cloudformation:props": {}
+                      "aws:cdk:cloudformation:props": {
+                        "bucketName": "quiddler-validator-0bc"
+                      }
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_s3.CfnBucket",
@@ -202,7 +204,7 @@
                           "s3Bucket": {
                             "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
                           },
-                          "s3Key": "345ae2eeba6c5ac003459f93f06ac4edbd2f60114d8443918ca95d77810d6355.zip"
+                          "s3Key": "fb91b6a987d73b3f2c1c672eeb0fde57942721a29077d849f89ce87420de892f.zip"
                         },
                         "role": {
                           "Fn::GetAtt": [
