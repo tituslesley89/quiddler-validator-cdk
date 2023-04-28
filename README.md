@@ -1,14 +1,7 @@
-# Welcome to your CDK TypeScript project
+# Quiddler-Word-Checker-CDK
 
-This is a blank project for TypeScript development with CDK.
+CDK package to set-up the entire quiddler-word-checker infra in your AWS account.
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
-
-## Useful commands
-
-* `npm run build`   compile typescript to js
-* `npm run watch`   watch for changes and compile
-* `npm run test`    perform the jest unit tests
-* `cdk deploy`      deploy this stack to your default AWS account/region
-* `cdk diff`        compare deployed stack with current state
-* `cdk synth`       emits the synthesized CloudFormation template
+- Lambda for compute.
+- S3 for storage
+- APIGateway for request processing
